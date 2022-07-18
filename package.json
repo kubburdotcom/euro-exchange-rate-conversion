@@ -1,0 +1,17 @@
+{
+  "name": "euro-exchange-rate-conversion",
+  "version": "1.0.0",
+  "description": "RESTful Web API for pulling the exchange rate of the euro from the ECB and caching it",
+  "main": "main.js",
+  "author": "Kjartan Hrafnkelsson",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "node-fetch": "^2.6.6",
+    "xml2js": "^0.4.23"
+  }
+}
