@@ -7,6 +7,11 @@ const parser = new xml2js.Parser;
 
 app.disable('x-powered-by');
 
+app.use((req, res, next) => {
+    res.set('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 app.get('/', async (req, res) => {
     const rates = await fetch('https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml');
     const json_rates = await parser.parseStringPromise(await rates.text());
